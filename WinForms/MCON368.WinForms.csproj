@@ -12,4 +12,10 @@
     <PackageReference Include="MetroModernUI" Version="1.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Images\" />
+    <Folder Include="WinForms\" />
+    <Folder Include="UserControls\" />
+  </ItemGroup>
+
 </Project>
