@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinForms", "WinForms\WinForms.csproj", "{58AD57E3-3939-4B59-A981-AFF5B8FA75A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MCON368.WinForms", "WinForms\MCON368.WinForms.csproj", "{58AD57E3-3939-4B59-A981-AFF5B8FA75A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{FEE4C1BA-EF8D-4D73-978E-1FF3AFEB247B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MCON368.Data", "Data\MCON368.Data.csproj", "{FEE4C1BA-EF8D-4D73-978E-1FF3AFEB247B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{E64B2047-4489-4D2B-A1B8-30E0FE23E237}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MCON368.Entity", "Entity\MCON368.Entity.csproj", "{E64B2047-4489-4D2B-A1B8-30E0FE23E237}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notes", "Notes\Notes.csproj", "{2A512B50-219E-4861-A464-5F20CB5D33E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MCON368.Notes", "Notes\MCON368.Notes.csproj", "{2A512B50-219E-4861-A464-5F20CB5D33E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

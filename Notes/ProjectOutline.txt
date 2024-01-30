@@ -1,0 +1,12 @@
+﻿Solution:   MCON386 (Create Empty Solution)
+      1)    Project #1: Our UI (MCON368.WinForm - WinForms application)
+            WinForms Application called MCON368.WinForm (default project)
+            Our UI
+            Contains all forms our application will use
+      2)    Project #2: Database interface (MCON368.Data - Class Library)
+            Talks to our database
+            Houses factory methods for all interaction with database
+      3)    Project #3: Entities (MCON368.Entity - Class Library)
+            Contains all object classes
+      4)    Project #4: Notes (MCON368.Notes - Class Library)
+            A plain Class Library for notes pertaining to the project)
