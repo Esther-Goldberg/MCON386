@@ -10,5 +10,6 @@
         public int NumberOfUsers { get; set; }
         public int NumberOfChats { get; set; }
         public MetroColorEntity ChatColor { get; set; }
+        public int MetroColorKey { get; set; }
     }
 }

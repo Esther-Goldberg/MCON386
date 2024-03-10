@@ -1,4 +1,6 @@
-﻿namespace MCON368.Entity
+﻿using System.Data;
+
+namespace MCON368.Entity
 {
     public class UserProfileEntity
     {
@@ -16,5 +18,7 @@
         public string DisplayName { get; set; }
         public DateTime LastRefreshed { get; set; }
         public StartUpObjectEntity StartupObjects { get; set; }
+        public string? SQLUserName { get; set; }
+
     }
 }

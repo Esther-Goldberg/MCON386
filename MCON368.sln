@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MCON368.Entity", "Entity\MC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MCON368.Notes", "Notes\MCON368.Notes.csproj", "{2A512B50-219E-4861-A464-5F20CB5D33E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MidtermExam", "MidtermExam\MidtermExam.csproj", "{BFC16968-5CD1-4F88-B0E3-DB3E01C6FB93}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{2A512B50-219E-4861-A464-5F20CB5D33E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A512B50-219E-4861-A464-5F20CB5D33E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A512B50-219E-4861-A464-5F20CB5D33E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFC16968-5CD1-4F88-B0E3-DB3E01C6FB93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFC16968-5CD1-4F88-B0E3-DB3E01C6FB93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFC16968-5CD1-4F88-B0E3-DB3E01C6FB93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFC16968-5CD1-4F88-B0E3-DB3E01C6FB93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

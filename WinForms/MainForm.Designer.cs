@@ -28,12 +28,68 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            calculateButton = new Button();
+            firstInputTextBox = new TextBox();
+            secondInputTextBox = new TextBox();
+            resultsLabel = new Label();
+            SuspendLayout();
+            // 
+            // calculateButton
+            // 
+            calculateButton.Location = new Point(364, 208);
+            calculateButton.Name = "calculateButton";
+            calculateButton.Size = new Size(75, 23);
+            calculateButton.TabIndex = 0;
+            calculateButton.Text = "Calculate";
+            calculateButton.UseVisualStyleBackColor = true;
+            calculateButton.Click += calculateButton_Click;
+            // 
+            // firstInputTextBox
+            // 
+            firstInputTextBox.Location = new Point(364, 90);
+            firstInputTextBox.Name = "firstInputTextBox";
+            firstInputTextBox.Size = new Size(100, 23);
+            firstInputTextBox.TabIndex = 1;
+            firstInputTextBox.Leave += TextBoxLeaveEvent;
+            // 
+            // secondInputTextBox
+            // 
+            secondInputTextBox.Location = new Point(364, 134);
+            secondInputTextBox.Name = "secondInputTextBox";
+            secondInputTextBox.Size = new Size(100, 23);
+            secondInputTextBox.TabIndex = 2;
+            secondInputTextBox.Leave += TextBoxLeaveEvent;
+            // 
+            // resultsLabel
+            // 
+            resultsLabel.AutoSize = true;
+            resultsLabel.Location = new Point(364, 175);
+            resultsLabel.Name = "resultsLabel";
+            resultsLabel.Size = new Size(37, 15);
+            resultsLabel.TabIndex = 3;
+            resultsLabel.Text = "Unset";
+            // 
+            // MainForm
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(resultsLabel);
+            Controls.Add(secondInputTextBox);
+            Controls.Add(firstInputTextBox);
+            Controls.Add(calculateButton);
+            Name = "MainForm";
+            Text = "Main Form";
+            Load += MainForm_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Button calculateButton;
+        private TextBox firstInputTextBox;
+        private TextBox secondInputTextBox;
+        private Label resultsLabel;
     }
 }
