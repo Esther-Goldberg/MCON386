@@ -28,68 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            calculateButton = new Button();
-            firstInputTextBox = new TextBox();
-            secondInputTextBox = new TextBox();
-            resultsLabel = new Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            panelLayout = new FlowLayoutPanel();
             SuspendLayout();
             // 
-            // calculateButton
+            // panelLayout
             // 
-            calculateButton.Location = new Point(364, 208);
-            calculateButton.Name = "calculateButton";
-            calculateButton.Size = new Size(75, 23);
-            calculateButton.TabIndex = 0;
-            calculateButton.Text = "Calculate";
-            calculateButton.UseVisualStyleBackColor = true;
-            calculateButton.Click += calculateButton_Click;
-            // 
-            // firstInputTextBox
-            // 
-            firstInputTextBox.Location = new Point(364, 90);
-            firstInputTextBox.Name = "firstInputTextBox";
-            firstInputTextBox.Size = new Size(100, 23);
-            firstInputTextBox.TabIndex = 1;
-            firstInputTextBox.Leave += TextBoxLeaveEvent;
-            // 
-            // secondInputTextBox
-            // 
-            secondInputTextBox.Location = new Point(364, 134);
-            secondInputTextBox.Name = "secondInputTextBox";
-            secondInputTextBox.Size = new Size(100, 23);
-            secondInputTextBox.TabIndex = 2;
-            secondInputTextBox.Leave += TextBoxLeaveEvent;
-            // 
-            // resultsLabel
-            // 
-            resultsLabel.AutoSize = true;
-            resultsLabel.Location = new Point(364, 175);
-            resultsLabel.Name = "resultsLabel";
-            resultsLabel.Size = new Size(37, 15);
-            resultsLabel.TabIndex = 3;
-            resultsLabel.Text = "Unset";
+            panelLayout.Location = new Point(12, 12);
+            panelLayout.Name = "panelLayout";
+            panelLayout.Size = new Size(776, 426);
+            panelLayout.TabIndex = 0;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(resultsLabel);
-            Controls.Add(secondInputTextBox);
-            Controls.Add(firstInputTextBox);
-            Controls.Add(calculateButton);
+            Controls.Add(panelLayout);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MainForm";
             Text = "Main Form";
             Load += MainForm_Load;
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Button calculateButton;
-        private TextBox firstInputTextBox;
-        private TextBox secondInputTextBox;
-        private Label resultsLabel;
+        private FlowLayoutPanel panelLayout;
     }
 }

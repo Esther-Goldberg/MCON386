@@ -1,4 +1,8 @@
+using MCON368.Data.Code;
+using MCON368.Entity;
 using MCON368.WinForms.Code;
+using MCON368.WinForms.UserControls;
+using MCON368.WinForms.WinForms;
 
 namespace WinForms
 {
@@ -11,23 +15,52 @@ namespace WinForms
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            PopLoginForm();
         }
 
-        private void calculateButton_Click(object sender, EventArgs e)
+        private void PopLoginForm()
         {
-            doCalculations();
+            LoginForm loginForm = new();
+            loginForm.FormClosed += FormClosed;
+            loginForm.ShowDialog();
         }
 
-        private void doCalculations()
+        private void FormClosed(object? sender, FormClosedEventArgs e)
         {
-            if (!LocalFunctions.isNumeric(firstInputTextBox.Text)) { resultsLabel.Text = "Please ensure first number is numeric"; }
-            else if (!LocalFunctions.isNumeric(secondInputTextBox.Text)) { resultsLabel.Text = "Please ensure second number is numeric"; }
-            else { resultsLabel.Text = (Convert.ToInt32(firstInputTextBox.Text) * Convert.ToInt32(secondInputTextBox.Text)).ToString(); }
+            List<GroupChatEntity> groupList = new();
+            if (GlobalSettingsEntity.currentUser == null || GlobalSettingsEntity.currentUser.UserProfileKey <= 0)
+            {
+                Environment.Exit(0);
+            } else
+            {
+                this.Text = "MCON 368 ChatBot - Welcome Back, " + GlobalSettingsEntity.currentUser.DisplayName;
+                this.Refresh();
+
+                groupList = GroupChatFactory.GetGroupChats();
+
+                foreach (GroupChatEntity chat in groupList)
+                {
+                    panelLayout.Controls.Add(new GroupChatTileControl {  CurrentChat = chat });
+                }
+
+            }
         }
 
-        private void TextBoxLeaveEvent(object sender, EventArgs e)
+    }
+}
+
+public static class Extensions
+{
+    public static string MixedCase(this string theString, bool makeUpperCase)
+    {
+        string returnData = string.Empty;
+        if (!string.IsNullOrEmpty(theString))
         {
-            doCalculations();
+            for (int i = 0; i < theString.Length; i++)
+            {
+                returnData += i % 2 != 0 ? theString.Substring(i, 1).ToLower() : theString.Substring(i, 1).ToUpper();
+            }
         }
+        return returnData;
     }
 }

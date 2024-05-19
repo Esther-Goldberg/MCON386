@@ -8,6 +8,6 @@
         public string DisplayName { get; set; }
         public int UserProfileKey { get; set; }
         public string ProfilePicture { get; set; }
-        public DateTime ChatDateTime { get; set; }
+        public DateTime CreatedDateTime { get; set; }
     }
 }

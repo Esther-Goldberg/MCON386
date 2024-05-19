@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             loginPanel = new Panel();
+            closeButton = new Button();
             passwordLabel = new Label();
             loginButton = new Button();
             usernameTextbox = new TextBox();
             passwordTextbox = new TextBox();
             usernameLabel = new Label();
             headerLabel = new Label();
-            closeButton = new Button();
             loginPanel.SuspendLayout();
             SuspendLayout();
             // 
@@ -55,10 +55,23 @@
             loginPanel.Size = new Size(345, 309);
             loginPanel.TabIndex = 0;
             // 
+            // closeButton
+            // 
+            closeButton.BackgroundImage = (Image)resources.GetObject("closeButton.BackgroundImage");
+            closeButton.BackgroundImageLayout = ImageLayout.Zoom;
+            closeButton.ForeColor = SystemColors.ActiveCaption;
+            closeButton.Location = new Point(315, 0);
+            closeButton.Name = "closeButton";
+            closeButton.Size = new Size(30, 30);
+            closeButton.TabIndex = 1;
+            closeButton.UseVisualStyleBackColor = true;
+            closeButton.Click += closeButton_Click;
+            // 
             // passwordLabel
             // 
             passwordLabel.AutoSize = true;
             passwordLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            passwordLabel.ForeColor = SystemColors.ControlLightLight;
             passwordLabel.Location = new Point(42, 154);
             passwordLabel.Name = "passwordLabel";
             passwordLabel.Size = new Size(76, 21);
@@ -76,6 +89,7 @@
             loginButton.TabIndex = 3;
             loginButton.Text = "Log In";
             loginButton.UseVisualStyleBackColor = false;
+            loginButton.Click += loginButton_Click;
             // 
             // usernameTextbox
             // 
@@ -85,6 +99,7 @@
             usernameTextbox.Size = new Size(259, 29);
             usernameTextbox.TabIndex = 1;
             usernameTextbox.Text = "Username";
+            usernameTextbox.KeyDown += loginOnEnter;
             // 
             // passwordTextbox
             // 
@@ -94,11 +109,13 @@
             passwordTextbox.Size = new Size(259, 29);
             passwordTextbox.TabIndex = 2;
             passwordTextbox.Text = "Password";
+            passwordTextbox.KeyDown += loginOnEnter;
             // 
             // usernameLabel
             // 
             usernameLabel.AutoSize = true;
             usernameLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            usernameLabel.ForeColor = SystemColors.ControlLightLight;
             usernameLabel.Location = new Point(42, 87);
             usernameLabel.Name = "usernameLabel";
             usernameLabel.Size = new Size(81, 21);
@@ -109,22 +126,12 @@
             // 
             headerLabel.AutoSize = true;
             headerLabel.Font = new Font("Levenim MT", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            headerLabel.ForeColor = SystemColors.ControlLightLight;
             headerLabel.Location = new Point(42, 36);
             headerLabel.Name = "headerLabel";
             headerLabel.Size = new Size(252, 30);
             headerLabel.TabIndex = 0;
             headerLabel.Text = "Log Into Your Account";
-            // 
-            // closeButton
-            // 
-            closeButton.BackgroundImage = (Image)resources.GetObject("closeButton.BackgroundImage");
-            closeButton.BackgroundImageLayout = ImageLayout.Zoom;
-            closeButton.ForeColor = SystemColors.ActiveCaption;
-            closeButton.Location = new Point(315, 0);
-            closeButton.Name = "closeButton";
-            closeButton.Size = new Size(30, 30);
-            closeButton.TabIndex = 1;
-            closeButton.UseVisualStyleBackColor = true;
             // 
             // LoginForm
             // 
@@ -135,6 +142,7 @@
             ClientSize = new Size(640, 360);
             Controls.Add(loginPanel);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "LoginForm";
             Opacity = 0.95D;
             Text = "Login";

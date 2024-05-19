@@ -9,12 +9,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Images\" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MetroModernUI" Version="1.4.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Images\" />
-    <Folder Include="UserControls\" />
+    <ProjectReference Include="..\Data\MCON368.Data.csproj" />
+    <ProjectReference Include="..\Entity\MCON368.Entity.csproj" />
   </ItemGroup>
 
   <ItemGroup>

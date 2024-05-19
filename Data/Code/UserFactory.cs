@@ -14,6 +14,7 @@ namespace MCON368.Data.Code
 
             try
             {
+                strSQL = string.Format(strSQL, userName);
                 ds = DataFactory.GetDataSet(strSQL, "UserInformation");
                 returnData.UserName = userName;
                 returnData.Password = password;
@@ -62,10 +63,10 @@ namespace MCON368.Data.Code
                 returnData.PhoneNumber = ds.Tables[0].Rows[0]["PhoneNumber"].ToString();
                 returnData.UserName = ds.Tables[0].Rows[0]["UserName"].ToString();
                 returnData.Password = ds.Tables[0].Rows[0]["Password"].ToString();
-                returnData.CreatedBy = ds.Tables[0].Rows[0]["CreatedBy"].ToString();
+                returnData.CreatedByUserProfileKey = Convert.ToInt32(ds.Tables[0].Rows[0]["CreatedByUserProfileKey"]);
                 returnData.CreatedDateTime = Convert.ToDateTime(ds.Tables[0].Rows[0]["CreatedDateTime"].ToString());
                 returnData.ActiveInd = ds.Tables[0].Rows[0]["ActiveInd"].ToString() == "1" ? true : false;
-                returnData.DisplayName = ds.Tables[0].Rows[0]["DisplayName"].ToString();
+                returnData.DisplayName = returnData.FirstName + " " + returnData.LastName;
                 returnData.LastRefreshed = DateTime.Now;
                 returnData.SQLUserName = ds.Tables[0].Rows[0]["SQLUserName"].ToString();
 
